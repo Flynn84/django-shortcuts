@@ -68,7 +68,7 @@ def run(command=None, *arguments):
         else:
             sys.exit('django-shortcuts: No \'manage.py\' script found in this directory or its parents.')
 
-    return call('%(python)s %(script_path)s %(command)s %(arguments)s' % {
+    return call('"%(python)s" %(script_path)s %(command)s %(arguments)s' % {
         'python': sys.executable,
         'script_path': os.path.join(script_path, 'manage.py'),
         'command': command or '',
